@@ -28,12 +28,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             }
             
             // Set subject
-            if let subject = subjectTextField.text {
+            if let subject = subjectTextField.text, !subject.isEmpty {
                 mailComposeViewController.setSubject(subject)
             }
             
             // Set message body
-            if let message = messageTextView.text {
+            if let message = messageTextView.text, !message.isEmpty {
                 mailComposeViewController.setMessageBody(message, isHTML: false)
             }
             
